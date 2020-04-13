@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#sesionOculta, #sesion {
+  top: calc(50% - 225px);
+  left: calc(50% - 225px);
+  width: 450px;
+  height: 350px;
+  position: fixed;
+  z-index: 4;
+  background-color: #ffffff;
+  border-radius: 20px;
+  transition: opacity 1.3s;
+}
+
+#sesionOculta {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#sesion {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#sesion h1, #sesionOculta h1{
+  color: #263d53;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#sesion input, #sesionOculta input {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: calc(50% - 175px);
+  height: 40px;
+  width: 350px;
+  border-radius: 20px;
+  outline: none;
+  border: 0;
+  background-color: #d1d1d1;
+  text-align: center;
+  filter: drop-shadow(0 1px 1px #666666);
+}
+
+#sesion h2, #sesionOculta h2 {
+  font-size: medium;
+  margin-top: 15px;
+  margin-left: 20%;
+}
+
+#sesion button, #sesionOculta button {
+  height: 50px;
+  width: 150px;
+  margin-left: calc(50% - 75px);
+  margin-top: 20px;
+  border-radius: 30px;
+  border: 0;
+  background-color: #33bba3;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #33bba3;
+  filter: drop-shadow(0 2px 2px #33bba3);
+}
+
+#sesion button h4, #sesionOculta button h4{
+  color: #ffffff;
+  font-size: large;
+  text-align: center;
+}

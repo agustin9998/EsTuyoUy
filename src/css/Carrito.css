@@ -1,0 +1,126 @@
+#carro {
+    width: 1000px;
+    min-height: 100px;
+    height: auto;
+    margin-left: calc(50% - 500px);
+    margin-top: 2%;
+    background-color: #ffffff;
+    border: 1px solid rgb(206, 206, 206);
+    filter: drop-shadow(0 1px 2px #7a7a7a);
+    border-radius: 5px;
+}
+
+#carro h4 {
+    text-align: center;
+    font-size: x-large;
+    padding-top: 30px;
+}
+
+#checkout {
+    width: 900px;
+    height: 100px;
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid rgb(206, 206, 206);
+    filter: drop-shadow(0 1px 2px #7a7a7a);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+#checkout h1 {
+    font-size: x-large;
+    top: 10%;
+    left: 5%;
+    position: absolute;
+}
+
+#checkoutHabilitado, #checkoutDeshabilitado {
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    right: 70px;
+    top: 30px;
+    background-color: #33bba3;
+    border: 0;
+    border: 1px solid #33bba3;
+    filter: drop-shadow(0 2px 2px #33bba3);
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: large;
+    text-decoration: none;
+}
+
+#checkoutHabilitado {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#checkoutDeshabilitado {
+    opacity: 0.5;
+    pointer-events: none
+}
+
+.compra {
+    width: 900px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    border: 1px solid rgb(206, 206, 206);
+    filter: drop-shadow(0 1px 2px #7a7a7a);
+    margin-bottom: 20px;
+  }
+
+.compra img {
+    width: 200px;
+    height: 198px;
+    margin-left: -1px;
+    border-radius: 5px 0px 0px 5px;
+    float: left;
+}
+
+.compra:hover {
+    transform: scale(1.01);
+}
+
+.compra h1, h2 {
+    margin-left: 50px;
+    float: left;
+}
+
+.compra h2 {
+    color: #575757;
+    position: absolute;
+    top: 60px;
+    left: 200px;
+}
+
+.compra h1 {
+    color: #2c2c2c;
+}
+
+#compras {
+    display: block;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.compra button {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    font-size: xx-large;
+    border-radius: 2px;
+    border: 1px solid rgba(206, 206, 206, 0.466);
+    filter: drop-shadow(0 1px 5px #b3b3b3);
+    color: rgb(158, 158, 158);
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    outline: rgb(139, 139, 139);
+    cursor: pointer;
+}

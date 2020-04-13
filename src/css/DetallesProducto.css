@@ -1,0 +1,88 @@
+#elemento {
+    width: 1100px;
+    height: 500px;
+    margin-left: calc(50% - 550px);
+    margin-top: 2%;
+    background-color: #ffffff;
+    border: 1px solid rgb(206, 206, 206);
+    filter: drop-shadow(0 1px 2px #7a7a7a);
+    border-radius: 5px;
+}
+
+#detalles {
+    width: 1000px;
+    height: 450px;
+    margin-left: calc(50% - 500px);
+    margin-top: 21px;
+    background-color: #ffffff;
+    border: 1px solid rgb(206, 206, 206);
+    filter: drop-shadow(0 1px 2px #7a7a7a);
+    border-radius: 5px;
+}
+
+#detalles img {
+    width: 450px;
+    height: 448px;
+    border-radius: 5px 0px 0px 5px;
+    float: left;
+}
+
+#informacion {
+    width: 550px;
+    height: 450px;
+    margin-left: 450px;
+}
+
+#informacion h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#informacion p {
+    text-align: justify;
+    text-justify: inter-word;
+    width: 450px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+#informacion h4 {
+    text-align: center;
+}
+
+#informacion h3 {
+    text-align: center;
+}
+
+#informacion button {
+    height: 40px;
+    width: 100px;
+    background-color: #33bba3;
+    border: 0;
+    border: 1px solid #33bba3;
+    filter: drop-shadow(0 2px 2px #33bba3);
+    color: white;
+    font-weight: 900;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    float: left;
+}
+
+#informacion input {
+    height: 40px;
+    width: 150px;
+    border-radius: 5px 0px 0px 5px;
+    border: 0;
+    border: 1px solid #d3d3d3;
+    filter: drop-shadow(0 2px 2px #cccccc);
+    text-align: center;
+    float: left;
+    outline: none;
+}
+
+#agregar {
+    width: 250px;
+    position: absolute;
+    right: 150px;
+    bottom: 30px;
+}
