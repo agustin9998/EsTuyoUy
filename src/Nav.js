@@ -12,7 +12,7 @@ const Nav = ({handleClick, usuarios, usuarioA}) => {
   return (
     <div className="Nav">
       <div id="header">
-        <img id="userMovil" src={require("./img/User.png")} height="30px" width="30px" onClick={handleClick}/>
+        <img id="userMovil" src={require("./img/User.png")} height="30px" width="30px" onClick={handleClick} alt=""/>
         <Link className="nav-Links" to="/"><h1>ESTUYO_UY</h1></Link>
         <div id="buscando">
           <form className="form">
@@ -23,10 +23,10 @@ const Nav = ({handleClick, usuarios, usuarioA}) => {
         <ul id="compu">
           <li><Link className="nav-Links" to="/vender">Vender</Link></li>
           <li><Link className="nav-Links" to="/carrito">Carrito</Link></li>
-          <li>{usuarioA != -1 ? <h3 onClick={handleClick}>Hola {usuarios[usuarioA].usuario}!</h3> : <button onClick={handleClick}>Iniciar sesion</button>}</li>
+          <li>{usuarioA !== -1 ? <h3 onClick={handleClick}>Hola {usuarios[usuarioA].usuario}!</h3> : <button onClick={handleClick}>Iniciar sesion</button>}</li>
         </ul>
-        <Link className="nav-Links-Movil-vender" to="/vender"><img src={require("./img/Vender.png")} height= "40px" width="40px"/></Link>
-        <Link className="nav-Links-Movil-Carro" to="/carrito"><img src={require("./img/Carro.png")} height= "40px" width="40px"/></Link>
+        <Link className="nav-Links-Movil-vender" to="/vender"><img src={require("./img/Vender.png")} height= "40px" width="40px" alt=""/></Link>
+        <Link className="nav-Links-Movil-Carro" to="/carrito"><img src={require("./img/Carro.png")} height= "40px" width="40px"alt=""/></Link>
       </div>
     </div>
   )

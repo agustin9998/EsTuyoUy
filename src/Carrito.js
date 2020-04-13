@@ -14,8 +14,8 @@ const Carrito = (props) => {
   const [habilitar, setHabilitar] = useState(false);
 
   const vacio = () => {
-    if (carros[usuarioA] != undefined){
-      if (carros[usuarioA][0] != undefined) {
+    if (carros[usuarioA] !== undefined){
+      if (carros[usuarioA][0] !== undefined) {
         setHabilitar(true);
       }else {
         setHabilitar(false);
@@ -48,7 +48,7 @@ const Carrito = (props) => {
   }
   
   const sumarPrecio = () => {
-    if (carros[usuarioA] != undefined){
+    if (carros[usuarioA] !== undefined){
       let suma = 0;
       carros[usuarioA].map(p => suma += parseInt(productosById(p.prod).precio)*p.cant);
       return suma;
@@ -64,10 +64,10 @@ const Carrito = (props) => {
   return (
     <div className="carrito">
         <div id="carro">
-          {usuarioA != -1 ?
+          {usuarioA !== -1 ?
           <div>
             <div id="compras">
-              {carros[usuarioA][0] != undefined ? carros[usuarioA].map(p => <ElementoCarro prod={productosById(p.prod)} key={p.prod} borrar={borrarElemento} cant={p.cant}/>)  
+              {carros[usuarioA][0] !== undefined ? carros[usuarioA].map(p => <ElementoCarro prod={productosById(p.prod)} key={p.prod} borrar={borrarElemento} cant={p.cant}/>)  
               : <h4>No tiene productos en su carro</h4>}
               <h4> </h4>
             </div>

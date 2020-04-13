@@ -37,7 +37,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <div id={iluminated ? usuarioA != -1 ? "fInhabilitado" : 'fOscurecido' : 'fIluminado'} onClick={() => setIluminated(false)}></div>
+      <div id={iluminated ? usuarioA !== -1 ? "fInhabilitado" : 'fOscurecido' : 'fIluminado'} onClick={() => setIluminated(false)}></div>
       <Router>
         <Nav handleClick={() => setIluminated(true)} usuarios={usuarios} usuarioA={usuarioA}/>
         <Switch>
@@ -50,7 +50,7 @@ const App = () => {
             </CarrosDelivery>
           </ProdDelivery>
         </Switch>
-      {usuarioA != -1 ? <div id={iluminated ? "campoUsuarioI" : "campoUsuarioO"}><div className="arrow-up"/><div id="campoCerrarSesion">
+      {usuarioA !== -1 ? <div id={iluminated ? "campoUsuarioI" : "campoUsuarioO"}><div className="arrow-up"/><div id="campoCerrarSesion">
         <h4 onClick={cerrarSesion}>Cerrar sesion</h4></div></div> 
       : <Sesion iluminated={iluminated} setIluminated={setIluminated} usuarios={usuarios}/>}
       </Router>

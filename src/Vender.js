@@ -50,8 +50,8 @@ const Vender = () => {
   
   return (
     <div className="vender">
-        <div id={usuarioA != -1 ? "altaProducto" : "dIniciar"}>
-          {usuarioA != -1 ?
+        <div id={usuarioA !== -1 ? "altaProducto" : "dIniciar"}>
+          {usuarioA !== -1 ?
           <div> 
             <h1>Vende Tu Producto</h1>
             <div id="campos">

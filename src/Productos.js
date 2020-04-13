@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import './css/Productos.css';
 import {ProdContext} from './Context/ProdGuardados.js'
 import Producto from './Producto.js'
@@ -8,7 +8,7 @@ const Productos = (props) => {
   const [productos] = useContext(ProdContext); 
 
   function filtrar() {
-    if (filtro == undefined){
+    if (filtro === undefined){
       return productos;
     }
     return productos.filter(p => p.nombre.toLowerCase().includes(filtro));

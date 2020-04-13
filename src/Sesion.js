@@ -15,7 +15,7 @@ const Sesion = ({iluminated, setIluminated, usuarios}) => {
 
   function existeUSusario() {
     for(var i = 0; i < usuarios.length; i += 1) {
-        if(usuarios[i].usuario == input.usuario && usuarios[i].contraseña == input.contraseña) {
+        if(usuarios[i].usuario === input.usuario && usuarios[i].contraseña === input.contraseña) {
             return i;
         }
     }
@@ -24,7 +24,7 @@ const Sesion = ({iluminated, setIluminated, usuarios}) => {
 
   const iniciarSesion = () => {
     var pos = existeUSusario();
-    if (pos != -1){
+    if (pos !== -1){
       setActual(pos);
       setIluminated(false);
     }

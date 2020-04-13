@@ -15,7 +15,7 @@ const Detalles = (props) => {
 
   function existeEnCarro() {
     for(var i = 0; i < carros[usuarioA].length; i += 1) {
-        if(carros[usuarioA][i].prod == prod.id) {
+        if(carros[usuarioA][i].prod === prod.id) {
             return i;
         }
     }
@@ -53,7 +53,7 @@ const Detalles = (props) => {
               <h4>{prod.ubicacion}</h4>
               <h3>$ {prod.precio}</h3>
               <div id="agregar">
-              {usuarioA != -1 ?
+              {usuarioA !== -1 ?
               <div>
               <input type="number" defaultValue="1" onChange={acutalizarInput} placeholder="Cantidad:"/>
               <Link to={{ pathname: "/carrito"}}><button onClick={() => addCarro(input)}>Agregar al carro</button></Link>
