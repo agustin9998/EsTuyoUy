@@ -1,11 +1,9 @@
-import React, { useState, useContext } from 'react';
+import React, { useState} from 'react';
 import './css/Sesion.css';
-import {ActualContext} from './Context/UsuarioActual.js'
 import {Link} from 'react-router-dom';
 
-const Sesion = ({iluminated, setIluminated, usuarios}) => {
+const Sesion = ({iluminated, setIluminated, usuarios, setActual}) => {
   const [input, setInput] = useState({usuario: '', contraseña: ''})
-  const [usuarioA, setActual] = useContext(ActualContext)
 
   const actualizarInput = ({target}) => {
     var inputAux = input;

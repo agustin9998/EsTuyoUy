@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useCallback } from 'react';
 import './css/Carrito.css';
 import ElementoCarro from './ElementoCarro.js';
 import {CarrosContext} from './Context/CarrosGuardados.js';
@@ -13,7 +13,7 @@ const Carrito = (props) => {
   const [precioTotal, setPrecio] = useState(0);
   const [habilitar, setHabilitar] = useState(false);
 
-  const vacio = () => {
+  const vacio = useCallback(() => {
     if (carros[usuarioA] !== undefined){
       if (carros[usuarioA][0] !== undefined) {
         setHabilitar(true);
@@ -23,12 +23,12 @@ const Carrito = (props) => {
     }else {
       setHabilitar(false);
     }
-  }
+  }, [carros, usuarioA]);
 
-  const productosById = (id) => {
+  const productosById = useCallback((id) => {
     const prod = productos[id];
     return prod;
-  }
+  }, [productos]);
 
   const handleCheckout = () => {
     let carroVacio = [];
@@ -47,19 +47,19 @@ const Carrito = (props) => {
     setCarros(carrosAux);
   }
   
-  const sumarPrecio = () => {
+  const sumarPrecio = useCallback(() => {
     if (carros[usuarioA] !== undefined){
       let suma = 0;
       carros[usuarioA].map(p => suma += parseInt(productosById(p.prod).precio)*p.cant);
       return suma;
     }
     return 0;
-  }
+  }, [carros, usuarioA, productosById]);
 
   useEffect(() => {
     setPrecio(sumarPrecio);
     vacio();
-  });
+  }, [sumarPrecio, vacio]);
   
   return (
     <div className="carrito">

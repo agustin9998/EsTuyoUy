@@ -52,7 +52,7 @@ const App = () => {
         </Switch>
       {usuarioA !== -1 ? <div id={iluminated ? "campoUsuarioI" : "campoUsuarioO"}><div className="arrow-up"/><div id="campoCerrarSesion">
         <h4 onClick={cerrarSesion}>Cerrar sesion</h4></div></div> 
-      : <Sesion iluminated={iluminated} setIluminated={setIluminated} usuarios={usuarios}/>}
+      : <Sesion iluminated={iluminated} setIluminated={setIluminated} usuarios={usuarios} setActual={setActual}/>}
       </Router>
     </div>
   )
